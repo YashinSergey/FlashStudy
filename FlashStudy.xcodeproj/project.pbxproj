@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		06973ED9A0DE7C5FD750F4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C40D5A50B28F946065A5A78 /* Assets.xcassets */; };
+		10D34EF78F03F9DEC18C873B /* AddCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46481DA5A9C8628629ABDB7 /* AddCardView.swift */; };
+		1339BA3C43B49D06299C1682 /* FlashcardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B34BCD9B50C0B53E2B6DB0D /* FlashcardStore.swift */; };
+		17504E40F9E2D72963B90F23 /* TuistBundle+FlashStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84B0910C6D7D8379EBE6523 /* TuistBundle+FlashStudy.swift */; };
+		177496B970236678B1BE2E61 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B89FDF89BC4FC467879094 /* AppCoordinator.swift */; };
+		271995777A38EE7062986141 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E39A8823637AE4FE33CA5DA /* AppTheme.swift */; };
+		51541116E35A4FFC6E9B636C /* FlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2E636EE93830E0E745EF144 /* FlipCardView.swift */; };
+		6E5742B691E54833049BBEFB /* StudyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945CE391AC8DCC9A036205C5 /* StudyViewModel.swift */; };
+		72B58F40A19D1445C83AA4DB /* TuistAssets+FlashStudy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A114011C3D998F4184545C1 /* TuistAssets+FlashStudy.swift */; };
+		7550752E302ABE24244122FE /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A30897169656FAB3F57CB /* RootCoordinatorView.swift */; };
+		A91BC7DA29058EFE525DC9B3 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7629D6D18B5ABB98D24E74 /* StudyView.swift */; };
+		CDD17C693B9A8D7D4A1FB291 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C2441639EA01A3214263D /* AddCardViewModel.swift */; };
+		D6483A007EF39A94A8CCCF82 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FE10DD199AE7ADE9F301CA /* SettingsViewModel.swift */; };
+		EE9249BE4F4B4E371285182D /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DE1647F33B9ED5BA58B08 /* Flashcard.swift */; };
+		F0BFD94E00B1B422FE4B5706 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6012AACFABE246BE03E9E /* SettingsView.swift */; };
+		F3495816F2A86012726EF028 /* ThemeStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D5AB4767546EC34F0B35C8 /* ThemeStore.swift */; };
+		FB6C73EC0CEC86E95E434F13 /* FlashStudyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FD9108BB8153042A7A72BE /* FlashStudyApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		372F879E98755E3A18BB39F7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		10FE10DD199AE7ADE9F301CA /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		1E39A8823637AE4FE33CA5DA /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		2C7629D6D18B5ABB98D24E74 /* StudyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyView.swift; sourceTree = "<group>"; };
+		35D5AB4767546EC34F0B35C8 /* ThemeStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeStore.swift; sourceTree = "<group>"; };
+		38D6012AACFABE246BE03E9E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		466A30897169656FAB3F57CB /* RootCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinatorView.swift; sourceTree = "<group>"; };
+		4C40D5A50B28F946065A5A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		685A7A017E2CEC860C5E86C9 /* FlashStudy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "FlashStudy-Info.plist"; sourceTree = "<group>"; };
+		761C2441639EA01A3214263D /* AddCardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewModel.swift; sourceTree = "<group>"; };
+		7A114011C3D998F4184545C1 /* TuistAssets+FlashStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistAssets+FlashStudy.swift"; sourceTree = "<group>"; };
+		7B34BCD9B50C0B53E2B6DB0D /* FlashcardStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardStore.swift; sourceTree = "<group>"; };
+		890DE1647F33B9ED5BA58B08 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard.swift; sourceTree = "<group>"; };
+		945CE391AC8DCC9A036205C5 /* StudyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewModel.swift; sourceTree = "<group>"; };
+		A01B8E7C9AA03E2FBDD17A39 /* FlashStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FD9108BB8153042A7A72BE /* FlashStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashStudyApp.swift; sourceTree = "<group>"; };
+		B84B0910C6D7D8379EBE6523 /* TuistBundle+FlashStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+FlashStudy.swift"; sourceTree = "<group>"; };
+		D46481DA5A9C8628629ABDB7 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
+		E5B89FDF89BC4FC467879094 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		F2E636EE93830E0E745EF144 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3563518C60BF24A8C2A71084 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14152FB266BFF37E981E2FC7 /* InfoPlists */ = {
+			isa = PBXGroup;
+			children = (
+				685A7A017E2CEC860C5E86C9 /* FlashStudy-Info.plist */,
+			);
+			path = InfoPlists;
+			sourceTree = "<group>";
+		};
+		1A6274D418270CB33CADB316 /* FlashStudy */ = {
+			isa = PBXGroup;
+			children = (
+				6E87F0E5825E6188D79EFE82 /* Coordinators */,
+				EBF14F6C8BCFD704A499C738 /* Models */,
+				8F65130D6591B248A9D02F96 /* Resources */,
+				F28F31BB010CD0964B0932F6 /* Services */,
+				89C40C0B17E1158C1F4B6350 /* ViewModels */,
+				355C9BFD1147A5386C8CFEEB /* Views */,
+				A4FD9108BB8153042A7A72BE /* FlashStudyApp.swift */,
+			);
+			path = FlashStudy;
+			sourceTree = "<group>";
+		};
+		355C9BFD1147A5386C8CFEEB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				594D5E0AC0025044FA98A670 /* Components */,
+				D46481DA5A9C8628629ABDB7 /* AddCardView.swift */,
+				466A30897169656FAB3F57CB /* RootCoordinatorView.swift */,
+				38D6012AACFABE246BE03E9E /* SettingsView.swift */,
+				2C7629D6D18B5ABB98D24E74 /* StudyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		594D5E0AC0025044FA98A670 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F2E636EE93830E0E745EF144 /* FlipCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6E87F0E5825E6188D79EFE82 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E5B89FDF89BC4FC467879094 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		7FB6450D79DC513E7D8335C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A01B8E7C9AA03E2FBDD17A39 /* FlashStudy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		89C40C0B17E1158C1F4B6350 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				761C2441639EA01A3214263D /* AddCardViewModel.swift */,
+				10FE10DD199AE7ADE9F301CA /* SettingsViewModel.swift */,
+				945CE391AC8DCC9A036205C5 /* StudyViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F65130D6591B248A9D02F96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4C40D5A50B28F946065A5A78 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9FFFBF6B8DAF3A090DF3E723 /* Derived */ = {
+			isa = PBXGroup;
+			children = (
+				14152FB266BFF37E981E2FC7 /* InfoPlists */,
+				AF6EA8B9CCB2170B0C05FC90 /* Sources */,
+			);
+			path = Derived;
+			sourceTree = "<group>";
+		};
+		AF6EA8B9CCB2170B0C05FC90 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7A114011C3D998F4184545C1 /* TuistAssets+FlashStudy.swift */,
+				B84B0910C6D7D8379EBE6523 /* TuistBundle+FlashStudy.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		B1BEDFCB2710BB404DB85070 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				9FFFBF6B8DAF3A090DF3E723 /* Derived */,
+				1A6274D418270CB33CADB316 /* FlashStudy */,
+			);
+			name = Project;
+			sourceTree = "<group>";
+		};
+		B6F259744A0213C9BBBB1BA1 = {
+			isa = PBXGroup;
+			children = (
+				B1BEDFCB2710BB404DB85070 /* Project */,
+				7FB6450D79DC513E7D8335C3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBF14F6C8BCFD704A499C738 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1E39A8823637AE4FE33CA5DA /* AppTheme.swift */,
+				890DE1647F33B9ED5BA58B08 /* Flashcard.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F28F31BB010CD0964B0932F6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7B34BCD9B50C0B53E2B6DB0D /* FlashcardStore.swift */,
+				35D5AB4767546EC34F0B35C8 /* ThemeStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50856E1C317B5C23BB111F49 /* FlashStudy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71BC6DF16155E46340F9C497 /* Build configuration list for PBXNativeTarget "FlashStudy" */;
+			buildPhases = (
+				88370F75F3A6E3C0FF57D7BA /* Sources */,
+				38A9D650D86FE276FA89ED89 /* Resources */,
+				3563518C60BF24A8C2A71084 /* Frameworks */,
+				372F879E98755E3A18BB39F7 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlashStudy;
+			packageProductDependencies = (
+			);
+			productName = FlashStudy;
+			productReference = A01B8E7C9AA03E2FBDD17A39 /* FlashStudy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22116DF336628AEFA2C0760D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 2C7606CE586C2FA4FA43BF57 /* Build configuration list for PBXProject "FlashStudy" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = B6F259744A0213C9BBBB1BA1;
+			productRefGroup = 7FB6450D79DC513E7D8335C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50856E1C317B5C23BB111F49 /* FlashStudy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38A9D650D86FE276FA89ED89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06973ED9A0DE7C5FD750F4FC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88370F75F3A6E3C0FF57D7BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72B58F40A19D1445C83AA4DB /* TuistAssets+FlashStudy.swift in Sources */,
+				17504E40F9E2D72963B90F23 /* TuistBundle+FlashStudy.swift in Sources */,
+				177496B970236678B1BE2E61 /* AppCoordinator.swift in Sources */,
+				FB6C73EC0CEC86E95E434F13 /* FlashStudyApp.swift in Sources */,
+				271995777A38EE7062986141 /* AppTheme.swift in Sources */,
+				EE9249BE4F4B4E371285182D /* Flashcard.swift in Sources */,
+				1339BA3C43B49D06299C1682 /* FlashcardStore.swift in Sources */,
+				F3495816F2A86012726EF028 /* ThemeStore.swift in Sources */,
+				CDD17C693B9A8D7D4A1FB291 /* AddCardViewModel.swift in Sources */,
+				D6483A007EF39A94A8CCCF82 /* SettingsViewModel.swift in Sources */,
+				6E5742B691E54833049BBEFB /* StudyViewModel.swift in Sources */,
+				10D34EF78F03F9DEC18C873B /* AddCardView.swift in Sources */,
+				51541116E35A4FFC6E9B636C /* FlipCardView.swift in Sources */,
+				7550752E302ABE24244122FE /* RootCoordinatorView.swift in Sources */,
+				F0BFD94E00B1B422FE4B5706 /* SettingsView.swift in Sources */,
+				A91BC7DA29058EFE525DC9B3 /* StudyView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		79AB3D88BFAB88CF640374B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A3AB124BD9896D3E9E3362F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/FlashStudy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flashstudy;
+				PRODUCT_NAME = FlashStudy;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+					"$(inherited)",
+					DEBUG,
+				);
+				SWIFT_COMPILATION_MODE = singlefile;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AB8E1042A2183F9F6023A51C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B36FECB1237C9FC62A59BF6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Derived/InfoPlists/FlashStudy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.flashstudy;
+				PRODUCT_NAME = FlashStudy;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2C7606CE586C2FA4FA43BF57 /* Build configuration list for PBXProject "FlashStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB8E1042A2183F9F6023A51C /* Debug */,
+				79AB3D88BFAB88CF640374B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71BC6DF16155E46340F9C497 /* Build configuration list for PBXNativeTarget "FlashStudy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3AB124BD9896D3E9E3362F4 /* Debug */,
+				B36FECB1237C9FC62A59BF6A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22116DF336628AEFA2C0760D /* Project object */;
+}
