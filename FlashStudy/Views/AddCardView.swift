@@ -7,11 +7,11 @@ struct AddCardView: View {
 
     var body: some View {
         Form {
-            Section("Новая пара") {
-                TextField("Слово или фраза (EN)", text: $viewModel.frontText)
+            Section(AddCardViewStrings.newPair.localized) {
+                TextField(AddCardViewStrings.frontSideRowHint.localized, text: $viewModel.frontText)
                     .textInputAutocapitalization(.sentences)
 
-                TextField("Перевод (RU)", text: $viewModel.backText)
+                TextField(AddCardViewStrings.backSideRowHint.localized, text: $viewModel.backText)
                     .textInputAutocapitalization(.sentences)
             }
 
@@ -23,14 +23,14 @@ struct AddCardView: View {
             }
 
             Section {
-                Button("Сохранить") {
+                Button(AddCardViewStrings.saveButtonTitle.localized) {
                     save()
                 }
                 .frame(maxWidth: .infinity)
                 .disabled(!viewModel.canSave)
             }
         }
-        .navigationTitle("Добавить")
+        .navigationTitle(AddCardViewStrings.addFlashcardTitle.localized)
     }
 
     private func save() {

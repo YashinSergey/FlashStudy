@@ -7,6 +7,7 @@ xcuserdata/
 
 # === Build products ===
 build/
+Derived/
 DerivedData/
 
 # === SwiftPM ===
@@ -14,14 +15,14 @@ DerivedData/
 .build/
 Package.resolved
 
-# === CocoaPods (если бы был, на будущее) ===
+# === CocoaPods ===
 Pods/
 Podfile.lock
 
-# === Carthage (если где-то используется) ===
+# === Carthage ===
 Carthage/Build/
 
-# === Fastlane (если появится) ===
+# === Fastlane ===
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
@@ -35,6 +36,11 @@ fastlane/test_output/
 *.ipa
 *.ds_store
 
-# === Swift Playground artifacts ===
+# === Playground ===
 timeline.xctimeline
 playground.xcworkspace
+
+# === Tuist generated ===
+**/.tuist-cache/
+
+

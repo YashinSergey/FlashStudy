@@ -7,12 +7,12 @@ struct FlipCardView: View {
 
     var body: some View {
         ZStack {
-            cardFace(text: frontText, caption: "EN")
+            cardFace(text: frontText)
                 .opacity(isFlipped ? 0 : 1)
                 .rotation3DEffect(.degrees(isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
                 .allowsHitTesting(!isFlipped)
 
-            cardFace(text: backText, caption: "RU")
+            cardFace(text: backText)
                 .opacity(isFlipped ? 1 : 0)
                 .rotation3DEffect(.degrees(isFlipped ? 0 : -180), axis: (x: 0, y: 1, z: 0))
                 .allowsHitTesting(isFlipped)
@@ -26,7 +26,7 @@ struct FlipCardView: View {
         }
     }
 
-    private func cardFace(text: String, caption: String) -> some View {
+    private func cardFace(text: String) -> some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .fill(Color(.secondarySystemBackground))
@@ -43,18 +43,11 @@ struct FlipCardView: View {
                 .lineLimit(4)
                 .padding(.horizontal, 18)
         }
-        .overlay(
-            Text(caption)
-                .font(.caption.bold())
-                .foregroundStyle(.secondary)
-                .padding(10),
-            alignment: .topTrailing
-        )
         .padding(.horizontal, 16)
     }
 }
 
 #Preview {
-    FlipCardView(frontText: "Hello", backText: "Привет", isFlipped: .constant(false))
+    FlipCardView(frontText: "Front", backText: "Back", isFlipped: .constant(false))
         .padding()
 }
