@@ -13,22 +13,14 @@ final class FlashcardStore: FlashcardStoreProtocol {
             let data = UserDefaults.standard.data(forKey: cardsKey),
             let cards = try? JSONDecoder().decode([Flashcard].self, from: data)
         else {
-            return Self.defaultCards
+            return []
         }
 
-        return cards.isEmpty ? Self.defaultCards : cards
+        return cards.isEmpty ? [] : cards
     }
 
     func saveCards(_ cards: [Flashcard]) {
         guard let data = try? JSONEncoder().encode(cards) else { return }
         UserDefaults.standard.set(data, forKey: cardsKey)
-    }
-
-    private static var defaultCards: [Flashcard] {
-        [
-            Flashcard(frontText: "Hello", backText: "Привет"),
-            Flashcard(frontText: "Thank you", backText: "Спасибо"),
-            Flashcard(frontText: "How are you?", backText: "Как дела?")
-        ]
     }
 }
