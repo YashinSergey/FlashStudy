@@ -27,6 +27,7 @@ final class StudyViewModel: ObservableObject {
     }
 
     func updateCards(_ cards: [Flashcard]) {
+        let hadNoCardsBefore = self.cards.isEmpty
         self.cards = cards
 
         if cards.isEmpty {
@@ -35,8 +36,14 @@ final class StudyViewModel: ObservableObject {
             return
         }
 
+        if hadNoCardsBefore {
+            currentIndex = 0
+            isFlipped = false
+            return
+        }
+
         if currentIndex >= cards.count {
-            currentIndex = cards.count - 1
+            currentIndex = max(0, cards.count - 1)
         }
     }
 
