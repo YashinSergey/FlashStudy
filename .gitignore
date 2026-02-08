@@ -1,0 +1,40 @@
+# === Xcode ===
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+*.xccheckout
+*.xcscmblueprint
+
+# === Build products ===
+build/
+DerivedData/
+
+# === SwiftPM ===
+.swiftpm/
+.build/
+Package.resolved
+
+# === CocoaPods (если бы был, на будущее) ===
+Pods/
+Podfile.lock
+
+# === Carthage (если где-то используется) ===
+Carthage/Build/
+
+# === Fastlane (если появится) ===
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output/
+
+# === Archives ===
+*.xcarchive
+
+# === Temporary / Logs ===
+*.moved-aside
+*.ipa
+*.ds_store
+
+# === Swift Playground artifacts ===
+timeline.xctimeline
+playground.xcworkspace
