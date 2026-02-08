@@ -8,10 +8,10 @@ struct RootCoordinatorView: View {
             StudyView(coordinator: coordinator)
                 .navigationDestination(for: AppCoordinator.Route.self) { route in
                     switch route {
-                    case .addCard:
-                        AddCardView(coordinator: coordinator)
-                    case .settings:
-                        SettingsView(coordinator: coordinator)
+                        case .addCard:
+                            AddCardView(coordinator: coordinator)
+                        case .settings:
+                            SettingsView(coordinator: coordinator)
                     }
                 }
         }

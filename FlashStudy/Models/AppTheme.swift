@@ -9,17 +9,17 @@ enum AppTheme: String, CaseIterable, Codable, Identifiable {
 
     var title: String {
         switch self {
-        case .system: return "Системная"
-        case .light: return "Светлая"
-        case .dark: return "Темная"
+            case .system: return SettingsViewStrings.systemTitle.localized
+            case .light: return SettingsViewStrings.lightTitle.localized
+            case .dark: return SettingsViewStrings.darkTitle.localized
         }
     }
 
     var colorScheme: ColorScheme? {
         switch self {
-        case .system: return nil
-        case .light: return .light
-        case .dark: return .dark
+            case .system: return nil
+            case .light: return .light
+            case .dark: return .dark
         }
     }
 }

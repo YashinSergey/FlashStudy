@@ -15,7 +15,7 @@ final class AddCardViewModel: ObservableObject {
         let back = backText.trimmingCharacters(in: .whitespacesAndNewlines)
 
         guard !front.isEmpty, !back.isEmpty else {
-            validationMessage = "Заполните оба поля"
+            validationMessage = AlertMessageStrings.fillBothFields.localized
             return nil
         }
 

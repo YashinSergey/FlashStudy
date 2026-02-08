@@ -11,22 +11,16 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section("Тема") {
-                Picker("Оформление", selection: $viewModel.selectedTheme) {
+            Section(SettingsViewStrings.appThemeTitle.localized) {
+                Picker(SettingsViewStrings.appearenceTitle.localized, selection: $viewModel.selectedTheme) {
                     ForEach(AppTheme.allCases) { theme in
                         Text(theme.title).tag(theme)
                     }
                 }
                 .pickerStyle(.segmented)
             }
-
-            Section {
-                Text("Тема применяется сразу для всего приложения.")
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-            }
         }
-        .navigationTitle("Настройки")
+        .navigationTitle(SettingsViewStrings.settingsTitle.localized)
         .onChange(of: viewModel.selectedTheme) { newTheme in
             coordinator.updateTheme(newTheme)
         }
