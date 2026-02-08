@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -61,6 +61,11 @@
 		F2E636EE93830E0E745EF144 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CE443E902F38AB6100875D9B /* Localization */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localization; sourceTree = "<group>"; };
+		CE4448D72F38B3E200875D9B /* Core */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Core; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		3563518C60BF24A8C2A71084 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -83,6 +88,7 @@
 		1A6274D418270CB33CADB316 /* FlashStudy */ = {
 			isa = PBXGroup;
 			children = (
+				CE4448D72F38B3E200875D9B /* Core */,
 				6E87F0E5825E6188D79EFE82 /* Coordinators */,
 				EBF14F6C8BCFD704A499C738 /* Models */,
 				8F65130D6591B248A9D02F96 /* Resources */,
@@ -143,6 +149,7 @@
 		8F65130D6591B248A9D02F96 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE443E902F38AB6100875D9B /* Localization */,
 				4C40D5A50B28F946065A5A78 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -217,6 +224,10 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				CE443E902F38AB6100875D9B /* Localization */,
+				CE4448D72F38B3E200875D9B /* Core */,
+			);
 			name = FlashStudy;
 			packageProductDependencies = (
 			);
@@ -231,6 +242,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2620;
 			};
 			buildConfigurationList = 2C7606CE586C2FA4FA43BF57 /* Build configuration list for PBXProject "FlashStudy" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -239,6 +251,7 @@
 			knownRegions = (
 				Base,
 				en,
+				ru,
 			);
 			mainGroup = B6F259744A0213C9BBBB1BA1;
 			productRefGroup = 7FB6450D79DC513E7D8335C3 /* Products */;
@@ -325,8 +338,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = X3CT597J4M;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -337,6 +352,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -353,16 +370,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flashstudy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iashinsergei.flashstudy;
 				PRODUCT_NAME = FlashStudy;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-					"$(inherited)",
-					DEBUG,
-				);
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
 				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -407,8 +421,10 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = X3CT597J4M;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -426,6 +442,8 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Debug;
 		};
@@ -441,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.flashstudy;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iashinsergei.flashstudy;
 				PRODUCT_NAME = FlashStudy;
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = NO;
