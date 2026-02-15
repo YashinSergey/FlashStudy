@@ -1,10 +1,12 @@
 import Foundation
+import Combine
 
 final class StudyViewModel: ObservableObject {
     @Published private(set) var currentIndex = 0
     @Published var isFlipped = false
 
     private var cards: [Flashcard] = []
+    private var cancellables = Set<AnyCancellable>()
 
     var hasCards: Bool { !cards.isEmpty }
 
@@ -18,12 +20,19 @@ final class StudyViewModel: ObservableObject {
         return "\(currentIndex + 1) / \(cards.count)"
     }
 
-    var canGoPrevious: Bool {
-        currentIndex > 0
-    }
+    var canGoPrevious: Bool { currentIndex > 0 }
 
-    var canGoNext: Bool {
-        currentIndex < cards.count - 1
+    var canGoNext: Bool { currentIndex < cards.count - 1 }
+
+    init(appViewModel: AppViewModel) {
+        self.cards = appViewModel.cards
+
+        appViewModel.$cards
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] newCards in
+                self?.updateCards(newCards)
+            }
+            .store(in: &cancellables)
     }
 
     func updateCards(_ cards: [Flashcard]) {
@@ -47,9 +56,7 @@ final class StudyViewModel: ObservableObject {
         }
     }
 
-    func flipCard() {
-        isFlipped.toggle()
-    }
+    func flipCard() { isFlipped.toggle() }
 
     func goNext() {
         guard canGoNext else { return }

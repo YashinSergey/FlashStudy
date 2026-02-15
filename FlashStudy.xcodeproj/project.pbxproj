@@ -19,6 +19,7 @@
 		7550752E302ABE24244122FE /* RootCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466A30897169656FAB3F57CB /* RootCoordinatorView.swift */; };
 		A91BC7DA29058EFE525DC9B3 /* StudyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7629D6D18B5ABB98D24E74 /* StudyView.swift */; };
 		CDD17C693B9A8D7D4A1FB291 /* AddCardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C2441639EA01A3214263D /* AddCardViewModel.swift */; };
+		CE44490D2F4214E600875D9B /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE44490C2F4214DB00875D9B /* AppViewModel.swift */; };
 		D6483A007EF39A94A8CCCF82 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10FE10DD199AE7ADE9F301CA /* SettingsViewModel.swift */; };
 		EE9249BE4F4B4E371285182D /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890DE1647F33B9ED5BA58B08 /* Flashcard.swift */; };
 		F0BFD94E00B1B422FE4B5706 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D6012AACFABE246BE03E9E /* SettingsView.swift */; };
@@ -56,6 +57,7 @@
 		A01B8E7C9AA03E2FBDD17A39 /* FlashStudy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashStudy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4FD9108BB8153042A7A72BE /* FlashStudyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashStudyApp.swift; sourceTree = "<group>"; };
 		B84B0910C6D7D8379EBE6523 /* TuistBundle+FlashStudy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TuistBundle+FlashStudy.swift"; sourceTree = "<group>"; };
+		CE44490C2F4214DB00875D9B /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
 		D46481DA5A9C8628629ABDB7 /* AddCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardView.swift; sourceTree = "<group>"; };
 		E5B89FDF89BC4FC467879094 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		F2E636EE93830E0E745EF144 /* FlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipCardView.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		89C40C0B17E1158C1F4B6350 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CE44490C2F4214DB00875D9B /* AppViewModel.swift */,
 				761C2441639EA01A3214263D /* AddCardViewModel.swift */,
 				10FE10DD199AE7ADE9F301CA /* SettingsViewModel.swift */,
 				945CE391AC8DCC9A036205C5 /* StudyViewModel.swift */,
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72B58F40A19D1445C83AA4DB /* TuistAssets+FlashStudy.swift in Sources */,
+				CE44490D2F4214E600875D9B /* AppViewModel.swift in Sources */,
 				17504E40F9E2D72963B90F23 /* TuistBundle+FlashStudy.swift in Sources */,
 				177496B970236678B1BE2E61 /* AppCoordinator.swift in Sources */,
 				FB6C73EC0CEC86E95E434F13 /* FlashStudyApp.swift in Sources */,

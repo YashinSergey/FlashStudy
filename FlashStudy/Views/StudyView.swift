@@ -1,14 +1,27 @@
 import SwiftUI
 
 struct StudyView: View {
-    @ObservedObject var coordinator: AppCoordinator
-    @StateObject private var viewModel = StudyViewModel()
+    @ObservedObject var viewModel: StudyViewModel
+    let onOpenAddCard: () -> Void
+    let onOpenSettings: () -> Void
+    let onDeleteCard: (_ id: UUID) -> Void
 
     var body: some View {
         ZStack {
             VStack(spacing: 20) {
                 if let card = viewModel.currentCard {
                     FlipCardView(frontText: card.frontText, backText: card.backText, isFlipped: $viewModel.isFlipped)
+                        .contextMenu {
+                            Button(StudyViewStrings.previousBtnTitle.localized) {
+                                // edit is not implemented yet — placeholder
+                            }
+
+                            Button(role: .destructive) {
+                                onDeleteCard(card.id)
+                            } label: {
+                                Text("Delete")
+                            }
+                        }
 
                     Text(viewModel.progressText)
                         .font(.subheadline)
@@ -46,24 +59,20 @@ struct StudyView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .topBarTrailing) {
                     Button {
-                        coordinator.showSettings()
+                        onOpenSettings()
                     } label: {
                         Image(systemName: "gearshape")
                     }
                 }
             }
-            .onAppear { viewModel.updateCards(coordinator.cards) }
-            .onReceive(coordinator.$cards) { cards in
-                viewModel.updateCards(cards)
-            }
 
-            /// Floating add button
+            // Floating add button bottom-right
             VStack {
                 Spacer()
                 HStack {
                     Spacer()
                     Button {
-                        coordinator.showAddCard()
+                        onOpenAddCard()
                     } label: {
                         Image(systemName: "plus")
                             .font(.title2)
@@ -95,7 +104,7 @@ struct StudyView: View {
                 .foregroundStyle(.secondary)
 
             Button {
-                coordinator.showAddCard()
+                onOpenAddCard()
             } label: {
                 Text(StudyViewStrings.addFlashcardBtnTitle.localized)
                     .padding(.vertical, 2)
@@ -110,6 +119,8 @@ struct StudyView: View {
 
 #Preview {
     NavigationStack {
-        StudyView(coordinator: AppCoordinator())
+        let appVM = AppViewModel()
+        let vm = StudyViewModel(appViewModel: appVM)
+        StudyView(viewModel: vm, onOpenAddCard: {}, onOpenSettings: {}, onDeleteCard: { _ in })
     }
 }

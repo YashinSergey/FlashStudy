@@ -7,19 +7,11 @@ final class AppCoordinator: ObservableObject {
     }
 
     @Published var path = NavigationPath()
-    @Published private(set) var cards: [Flashcard]
-    @Published var selectedTheme: AppTheme {
-        didSet { themeStore.saveTheme(selectedTheme) }
-    }
 
-    private let cardStore: FlashcardStoreProtocol
-    private let themeStore: ThemeStoreProtocol
+    private let appViewModel: AppViewModel
 
-    init(cardStore: FlashcardStoreProtocol = FlashcardStore(), themeStore: ThemeStoreProtocol = ThemeStore()) {
-        self.cardStore = cardStore
-        self.themeStore = themeStore
-        self.cards = cardStore.loadCards()
-        self.selectedTheme = themeStore.loadTheme()
+    init(appViewModel: AppViewModel) {
+        self.appViewModel = appViewModel
     }
 
     func showAddCard() {
@@ -30,13 +22,29 @@ final class AppCoordinator: ObservableObject {
         path.append(Route.settings)
     }
 
-    func addCard(front: String, back: String) {
-        let card = Flashcard(frontText: front, backText: back)
-        cards.append(card)
-        cardStore.saveCards(cards)
+    func pop() {
+        path.removeLast()
     }
 
-    func updateTheme(_ theme: AppTheme) {
-        selectedTheme = theme
+    @ViewBuilder
+    func destinationView(for route: Route) -> some View {
+        switch route {
+            case .addCard:
+                // Build AddCardViewModel and pass callbacks
+                let vm = AddCardViewModel()
+                AddCardView(viewModel: vm) {
+                    [weak self] front, back in
+                    self?.appViewModel.addCard(front: front, back: back)
+                    self?.pop()
+                } onCancel: { [weak self] in
+                    self?.pop()
+                }
+
+            case .settings:
+                let vm = SettingsViewModel(selectedTheme: appViewModel.selectedTheme)
+                SettingsView(viewModel: vm) { [weak self] newTheme in
+                    self?.appViewModel.updateTheme(newTheme)
+                }
+        }
     }
 }

@@ -1,13 +1,8 @@
 import SwiftUI
 
 struct SettingsView: View {
-    @ObservedObject var coordinator: AppCoordinator
-    @StateObject private var viewModel: SettingsViewModel
-
-    init(coordinator: AppCoordinator) {
-        self.coordinator = coordinator
-        _viewModel = StateObject(wrappedValue: SettingsViewModel(selectedTheme: coordinator.selectedTheme))
-    }
+    @ObservedObject var viewModel: SettingsViewModel
+    let onThemeChange: (AppTheme) -> Void
 
     var body: some View {
         Form {
@@ -22,13 +17,13 @@ struct SettingsView: View {
         }
         .navigationTitle(SettingsViewStrings.settingsTitle.localized)
         .onChange(of: viewModel.selectedTheme) { newTheme in
-            coordinator.updateTheme(newTheme)
+            onThemeChange(newTheme)
         }
     }
 }
 
 #Preview {
     NavigationStack {
-        SettingsView(coordinator: AppCoordinator())
+        SettingsView(viewModel: SettingsViewModel(selectedTheme: .system)) { _ in }
     }
 }

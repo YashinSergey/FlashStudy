@@ -1,10 +1,3 @@
-//
-//  FlashcardRepository.swift
-//  FlashStudy
-//
-//  Created by mr.Blue on 14.02.2026.
-//
-
 import Foundation
 
 final class FlashcardRepository: ObservableObject {

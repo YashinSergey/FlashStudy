@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct AddCardView: View {
-    @Environment(\.dismiss) private var dismiss
-    @ObservedObject var coordinator: AppCoordinator
-    @StateObject private var viewModel = AddCardViewModel()
+    @ObservedObject var viewModel: AddCardViewModel
+    let onSave: (_ front: String, _ back: String) -> Void
+    let onCancel: () -> Void
 
     var body: some View {
         Form {
@@ -35,14 +35,13 @@ struct AddCardView: View {
 
     private func save() {
         guard let values = viewModel.normalizedValues() else { return }
-        coordinator.addCard(front: values.front, back: values.back)
+        onSave(values.front, values.back)
         viewModel.reset()
-        dismiss()
     }
 }
 
 #Preview {
     NavigationStack {
-        AddCardView(coordinator: AppCoordinator())
+        AddCardView(viewModel: AddCardViewModel(), onSave: { _, _ in }, onCancel: { })
     }
 }

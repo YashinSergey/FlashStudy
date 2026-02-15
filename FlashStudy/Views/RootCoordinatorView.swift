@@ -1,21 +1,31 @@
 import SwiftUI
 
 struct RootCoordinatorView: View {
-    @StateObject var coordinator = AppCoordinator()
+    @StateObject private var appViewModel = AppViewModel()
+    @StateObject private var coordinator: AppCoordinator
+    @StateObject private var studyViewModel: StudyViewModel
+
+    init() {
+        let appVM = AppViewModel()
+        _appViewModel = StateObject(wrappedValue: appVM)
+        _coordinator = StateObject(wrappedValue: AppCoordinator(appViewModel: appVM))
+        _studyViewModel = StateObject(wrappedValue: StudyViewModel(appViewModel: appVM))
+    }
 
     var body: some View {
         NavigationStack(path: $coordinator.path) {
-            StudyView(coordinator: coordinator)
-                .navigationDestination(for: AppCoordinator.Route.self) { route in
-                    switch route {
-                        case .addCard:
-                            AddCardView(coordinator: coordinator)
-                        case .settings:
-                            SettingsView(coordinator: coordinator)
-                    }
-                }
+            StudyView(viewModel: studyViewModel, onOpenAddCard: {
+                coordinator.showAddCard()
+            }, onOpenSettings: {
+                coordinator.showSettings()
+            }, onDeleteCard: { id in
+                appViewModel.deleteCard(id: id)
+            })
+            .navigationDestination(for: AppCoordinator.Route.self) { route in
+                coordinator.destinationView(for: route)
+            }
         }
-        .preferredColorScheme(coordinator.selectedTheme.colorScheme)
+        .preferredColorScheme(appViewModel.selectedTheme.colorScheme)
     }
 }
 
